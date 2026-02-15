@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resturanr view</title>
+    
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="phone.css">
+     <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   
+
+
+<section id="login" class="page">
+  <h2>Login</h2>
+  <input placeholder="Email"><br>
+  <input type="password" placeholder="Password"><br>
+  <button>Login</button>
+  <button  onclick="showPage('home')">back</button>
+</section>
+
+<section id="register" class="page">
+  <h2>Register</h2>
+  <input placeholder="Name"><br>
+  <input placeholder="Email"><br>
+  <input type="password" placeholder="Password"><br>
+  <button>Register</button>
+   <button  onclick="showPage('home')">back</button>
+</section>
+
+
+<section id="home">
+     <div id="hero">
+ 
+<header class="navbar">
+  <div class="nav-left">
+    <img class="picg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZYR8OaLg1TeBTMJDPIHQ2Bst_wLdJ79S_A&s" class="logo">
+    <span class="brand">Midnight Munch</span>
+  </div>
+
+  <div class="toggle" onclick="toggleMenu()">☰</div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#"  onclick="showPage('register')" >Registration</a>
+    <a href="#"  onclick="showPage('login')">Login</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+ 
+
+  <div class="slides">
+    <div class="slide active">
+      <img src="https://jamitbistrony.com/wp-content/uploads/2025/08/places-that-are-open-941861-1024x576.jpg">
+       <h2 class="hello">Welcome <br> to <br>favorite <br>place </h2>
+      <h1>Delicious Food</h1>
+    </div>
+    <div class="slide">
+      <img src="https://images.stockcake.com/public/1/b/0/1b0a117d-20e8-4e5f-b171-fba0566c4141/golden-neon-dining-stockcake.jpg">
+       <h2 class="hello">Welcome <br> to <br>favorite <br>place  </h2>
+      <h1>Fresh Ingredients</h1>
+    </div>
+    <div class="slide">
+      <img src="https://cdn.bushwickdaily.com/wp-content/uploads/2025/04/rara_rhino_kev_turtle_02-scaled.jpeg">
+      <div class="flexmood">
+        <!-- <div class="mood1">
+      <h2 class="hello">Welcome <br> to <br>favorite <br>place </h2>
+      </div> -->
+      <div class="mode2">
+      <h1>Best Taste</h1>
+      </div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="https://cassette.sphdigital.com.sg/image/herworld/b648cc5df63d64a490c3744df9d6c07dbcb4b6b8e04666d90009ad5498e8c91e?w=1000&q=85">
+       <h2 class="hello">Welcome <br> to <br>favorite <br>place  </h2>
+      <h1>Quality Service</h1>
+    </div>
+    <div class="slide">
+      <img src="https://www.10wallpaper.com/wallpaper/1440x900/1807/Urban_skyscraper_western_restaurant_night_view_1440x900.jpg">
+      <h2 class="hello">Welcome <br> to <br>favorite <br>place  </h2>
+      <h1>Welcome to Foodies</h1>
+    </div>
+   <div class="lines">
+  <span onclick="goSlide(0)"></span>
+  <span onclick="goSlide(1)"></span>
+  <span onclick="goSlide(2)"></span>
+  <span onclick="goSlide(3)"></span>
+  <span onclick="goSlide(4)"></span>
+</div>
+  </div>
+     </div>
+
+<div class="about-section">
+  <div class="about-container">
+
+    <!-- Left Side -->
+    <div class="about-content">
+      <h2>About Midnight Munch</h2>
+      <p class="pg">
+        Midnight Munch is a modern restaurant created to satisfy your late‑night cravings.
+        We serve fresh ingredients, delicious flavors, and fast service.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🌙 Late Night</h3>
+          <p>Open till midnight.</p>
+        </div>
+
+        <div class="card">
+          <h3>🍔 Fresh Food</h3>
+          <p>Always fresh & tasty.</p>
+        </div>
+
+        <div class="card">
+          <h3>⚡ Fast Service</h3>
+          <p>Quick delivery.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side Image -->
+    <div class="about-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2RXtY4Iz3OTesczVsgE89BW4u3Ecy5cptA&s" alt="Midnight Munch">
+    </div>
+
+  </div>
+</div>
+
+<div class="menu-section">
+  <h2>Popular Dishes</h2>
+
+  <div class="slider" id="slider">
+     
+    <div class="menu-track">
+
+      <div class="menu-card">
+        <img src="https://thescranline.com/wp-content/uploads/2022/02/crispy-chicken-burger-WEB-01.jpg">
+        <h3>Chicken Burger</h3>
+        <p>Juicy grilled chicken</p>
+        <span>$5.99</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg">
+        <h3>Pizza</h3>
+        <p>Cheesy midnight special</p>
+        <span>$7.99</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?semt=ais_wordcount_boost&w=740&q=80">
+        <h3>Pasta</h3>
+        <p>Creamy Italian taste</p>
+        <span>$6.49</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://www.savoryexperiments.com/wp-content/uploads/2024/02/Cajun-Fries-19.jpg">
+        <h3>Fries</h3>
+        <p>Crispy & fresh</p>
+        <span>$3.99</span>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://media.istockphoto.com/id/510482834/photo/sandwich-bread-tomato-lettuce-and-yellow-cheese.jpg?s=612x612&w=0&k=20&c=Q69t_vK73KXddedlvN4RmFcPL34mCwEqprJvbDTyOWo=">
+        <h3>Sandwich</h3>
+        <p>Fresh & healthy</p>
+        <span>$4.49</span>
+      </div>
+
+       <div class="menu-card">
+        <img src="https://cdn.britannica.com/35/225835-050-A5CC289A/Indian-one-pot-meal-for-party.jpg">
+        <h3>Biryani</h3>
+        <p>enjoy time</p>
+        <span>$2.49</span>
+      </div>
+
+    
+    </div>
+ 
+  </div>
+  <div class="explore-wrapper">
+    <button class="explore-btn" id="exploreBtn">
+  Explore Full Menu
+</button>
+  </div>
+</div>
+<div class="info-section">
+
+  <!-- 1️⃣ Inside Sitting Area -->
+  <div class="info-row">
+    <div class="info-text">
+      <h2>Inside Sitting Area</h2>
+      <p class="short">
+        At Midnight Munch, our indoor sitting area is designed to give you a
+        warm, cozy, and relaxing dining experience. The comfortable seating,
+        soft lighting, and peaceful environment make it perfect for families,
+        friends, and couples.
+      </p>
+      <p class="more">
+        Whether you are enjoying a quick meal or spending quality time with
+        loved ones, our indoor space ensures comfort, privacy, and a premium
+        restaurant atmosphere.
+      </p>
+        <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="info-img">
+      <img src="https://img.freepik.com/free-photo/restaurant-interior_1127-3392.jpg?semt=ais_user_personalization&w=740&q=80">
+    </div>
+  </div>
+
+  <!-- 2️⃣ Park Area -->
+  <div class="info-row reverse">
+    <div class="info-text">
+      <h2>Outdoor Park Area</h2>
+      <p class="short">
+        Our beautiful outdoor park area offers fresh air dining under the open sky.
+        Surrounded by greenery and soft evening lights, it creates a peaceful
+        and refreshing environment.
+      </p>
+      <p class="more">
+        This space is perfect for birthday celebrations, family dinners,
+        and late-night gatherings. Enjoy delicious food while relaxing
+        in a natural and open setting.
+      </p>
+        <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="info-img">
+      <img src="https://media.istockphoto.com/id/949988530/photo/modern-restaurant-terrace-in-the-summer.jpg?s=612x612&w=0&k=20&c=ddRUiyKEsrhRpTc7TRd4Op4GbSWnK2W-GARXF8ioenI=">
+    </div>
+  </div>
+
+  <!-- 3️⃣ Second Floor Area -->
+  <div class="info-row">
+    <div class="info-text">
+      <h2>Second Floor Experience</h2>
+      <p class="short">
+        Our second-floor dining area provides a more private and elevated
+        experience. With spacious seating and a beautiful interior design,
+        it offers a calm and elegant atmosphere.
+      </p>
+      <p class="more">
+        From here, you can enjoy a unique view of the restaurant while
+        experiencing comfort and luxury. It is ideal for small events,
+        meetings, and special occasions.
+      </p>
+        <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="info-img">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUV_wq2xvOBvg95tC6Sq-LC5p0Hun4ycAhQg&s">
+    </div>
+  </div>
+
+  <!-- 4️⃣ Kitchen Area -->
+  <div class="info-row reverse">
+    <div class="info-text">
+      <h2>Our Professional Kitchen</h2>
+      <p class="short">
+        Cleanliness and quality are our top priorities. Our kitchen is
+        professionally managed and maintained with strict hygiene standards.
+      </p>
+      <p class="more">
+        Every dish at Midnight Munch is prepared using fresh ingredients,
+        expert cooking techniques, and passion for taste. Our chefs ensure
+        that each meal delivers the perfect flavor and quality.
+      </p>
+        <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="info-img">
+      <img src="https://passport-cdn.kiwicollection.com/blog/drive/uploads/2024/07/Open-Kitchens-1.jpg">
+    </div>
+  </div>
+
+</div>
+<div class="booking-section" id="booking">
+  <div class="booking-wrapper">
+
+    <!-- LEFT SIDE FORM -->
+    <div class="booking-form-box">
+      <h2>Reserve Your Table</h2>
+
+      <form id="bookingForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <!-- <div class="row"> -->
+          <input class="row1" type="date" required>
+          <input class="row1" type="time" required>
+        <!-- </div> -->
+
+        <select required>
+          <option value="">Select Guests</option>
+          <option>1 Person</option>
+          <option>2 Persons</option>
+          <option>Family (4+)</option>
+        </select>
+
+        <h3 class="area-title">Choose Sitting Area</h3>
+        <div class="area-options">
+          <div class="area-card" data-area="Inside"> First floor</div>
+          <div class="area-card" data-area="Park"> Park Area</div>
+          <div class="area-card" data-area="Second Floor">Second Floor</div>
+        </div>
+
+        <input type="hidden" id="selectedArea">
+
+        <button type="submit" class="book-btn">Book Now</button>
+      </form>
+    </div>
+
+    <!-- RIGHT SIDE CONTENT -->
+    <div class="booking-content">
+      <h2>Book Your Perfect Spot at Midnight Munch</h2>
+      <p>
+        Enjoy a luxury dining experience with multiple sitting options.
+        Whether you prefer a peaceful park view, cozy indoor seating,
+        or our premium second-floor atmosphere, we have the perfect
+        place reserved just for you.
+      </p>
+
+      <ul>
+        <li class="p1-1"> Comfortable Family Sitting Area</li>
+        <li class="p1-2"> Beautiful Outdoor Park View</li>
+        <li class="p1-3"> Premium Second Floor Dining</li>
+        <li class="p1-4">Fresh & Delicious Midnight Meals</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="testimonial-section">
+  <h2>Customer Experiences</h2>
+
+  <div class="sliderh">
+    <div class="slide-track">
+      <!-- 12 Cards -->
+      <div class="cardh"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXH_D7Su3MC-OjP2d02NsiQ8YVT2cDi3hskw&s"><h3>ELON</h3><p>Wonderful ambience with peaceful park view and cozy sitting area for families.</p></div>
+      <div class="cardh"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3v-MCOhyAjKiCebzV-5T23QddWVXZ9exdA&s"><h3>MUSAK</h3><p>Second floor sitting is perfect for privacy and beautiful evening dining.</p></div>
+      <div class="cardh"><img src="https://thumbs.dreamstime.com/b/young-indian-man-happy-outdoors-looking-camera-39595562.jpg"><h3>Arstoo</h3><p>Delicious food, quick service and stunning interior design experience.</p></div>
+      <div class="cardh"><img src="https://news.engineering.utoronto.ca/wp-content/uploads/sites/18/bb-plugin/cache/StephanieObeta_Cropped-360x450-square-a5f378fa304bbe4e43ee61fecf8d5db6-6024085fad469.png"><h3>Alice</h3><p>Kitchen is clean and staff behaviour is very professional and friendly.</p></div>
+      <div class="cardh"><img src="https://t3.ftcdn.net/jpg/01/86/40/16/360_F_186401650_6tXxwc5x3pwuA9bYjJG65l9pCFRIAu06.jpg"><h3>Emma</h3><p>Outdoor park sitting gives relaxing vibes with fresh air and greenery.</p></div>
+      <div class="cardh"><img src="https://media.istockphoto.com/id/1464539429/photo/thoughtful-business-man-with-a-digital-tablet.jpg?s=612x612&w=0&k=20&c=yLbK-rGNUkL0sPX4jw7Q_XE_vDtfj0X3nirixUlGtr4="><h3>Oliver</h3><p>Perfect place for family dinners, birthdays and weekend gatherings.</p></div>
+      <div class="cardh"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx-Ra29RqBc1s1NJB6DapdMnDNQgPprHbDfw&s"><h3>Jack</h3><p>Elegant lighting and modern furniture create luxury dining feel.</p></div>
+      <div class="cardh"><img src="https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg"><h3>Jacob</h3><p>Taste is amazing and menu has wide variety for every mood.</p></div>
+      <div class="cardh"><img src="https://images.picxy.com/cache/2020/11/4/f8578c247a70cd3195ee2a9c304b0bd3.jpg"><h3>Harry</h3><p>Service timing is fast and staff handles guests very respectfully.</p></div>
+      <div class="cardh"><img src="https://media.istockphoto.com/id/1333647263/photo/cheerful-african-teenage-girl-coming-in-her-house.jpg?s=612x612&w=0&k=20&c=UWZ5lRAkHa5ZxZgN5qOAytddmjR-wj_I44P1pXt2RFM="><h3>Noah</h3><p>Best rooftop and stairs sitting concept with beautiful night view.</p></div>
+      <div class="cardh"><img src="https://img.freepik.com/free-photo/young-woman-blue-sweater-autumn-park_1303-11368.jpg?semt=ais_user_personalization&w=740&q=80"><h3>Victoria</h3><p>Family friendly environment with peaceful and safe atmosphere.</p></div>
+      <div class="cardh"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4m1tO11YTuDeIXBjJS_teIVZc7UIim2UwjQ&s"><h3>Hero</h3><p>Overall outstanding experience, highly recommended for everyone.</p></div>
+    </div>
+  </div>
+
+  <div class="dots"></div>
+</div>
+    <div class="fb-sec">
+  <div class="fb-wrap">
+    
+    <!-- Left: Form -->
+    <div class="fb-form-box">
+      <form id="fbForm">
+        <h3>Give Your Feedback</h3>
+
+        <input type="text" id="fbName" placeholder="Your Name" required>
+        <input type="email" id="fbEmail" placeholder="Your Gmail" required>
+
+        <div class="fb-check">
+          <label><input type="checkbox" value="Service"> Service</label>
+          <label><input type="checkbox" value="Food"> Food</label>
+          <label><input type="checkbox" value="Ambience"> Ambience</label>
+        </div>
+
+        <textarea id="fbMsg" rows="4" placeholder="Write your feedback..." required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+        <p class="fb-success">✓ Feedback Submitted</p>
+      </form>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="fb-content">
+      <h2>We Value Your Opinion</h2>
+      <p>
+        Your feedback helps us improve our restaurant experience, service quality,
+        food taste and ambience. Share your honest review so we can make every visit
+        more enjoyable and memorable for you and your family.
+      </p>
+      <ul>
+        <li>✔ Improve food quality</li>
+        <li>✔ Better sitting experience</li>
+        <li>✔ Faster service</li>
+        <li>✔ Family friendly environment</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<footer class="pro-footer">
+  <div class="pro-footer-container">
+
+    <!-- About -->
+    <div class="pro-footer-col">
+      <h2 class="footer-logo">🍽️ Midnight Munch</h2>
+      <p>
+        Enjoy premium dining experience with delicious food, beautiful ambience,
+        family sitting areas and rooftop park view. We serve taste with comfort.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="pro-footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="pro-footer-col">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Main City Road, Pakistan</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+      <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+    </div>
+
+    <!-- Opening Hours -->
+    <div class="pro-footer-col">
+      <h3>Opening Hours</h3>
+      <p>Mon - Fri: 12PM - 11PM</p>
+      <p>Sat - Sun: 1PM - 12AM</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pro-footer-bottom">
+    <p>© 2026 Midnight Munch | Designed with ❤️</p>
+  </div>
+</footer>
+</section>
+<script src="7.js"></script>
+<script src="6.js"></script>
+  <script src="5.js"></script>
+  <script src="button-4.js"></script>
+<script src="three1.js"></script>
+<script src="three.js"></script>
+<script src="two.js"></script>
+<script src="section.js"></script>
+<script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

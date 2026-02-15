@@ -1,0 +1,36 @@
+@media(max-width: 768px){
+    .slide h2{
+        display: none;
+    }
+     .about-container{
+    flex-direction:column;
+    text-align:center;
+  }
+  .cards{
+    flex-direction:column;
+  }
+      .toggle{display:block}
+
+  .nav-links{
+    position:absolute;
+    top:65px;
+    right:0;
+    background:#111;
+    width:220px;
+    flex-direction:column;
+    display:none;
+  }
+
+  .nav-links a{
+    padding:15px;
+    border-bottom:1px solid #333;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+  
+
+ 
+}
