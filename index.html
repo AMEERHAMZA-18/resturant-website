@@ -34,7 +34,7 @@
 
 
 <section id="home">
-     <div id="hero">
+     
  
 <header class="navbar">
   <div class="nav-left">
@@ -53,48 +53,62 @@
   </nav>
 </header>
  
-
+<div id="hero">
   <div class="slides">
-    <div class="slide active">
-      <img src="https://jamitbistrony.com/wp-content/uploads/2025/08/places-that-are-open-941861-1024x576.jpg">
-       <h2 class="hello">Welcome <br> to <br>favorite <br>place </h2>
-      <h1>Delicious Food</h1>
-    </div>
+
+    <!-- Slides -->
     <div class="slide active">
       <img src="https://images.stockcake.com/public/1/b/0/1b0a117d-20e8-4e5f-b171-fba0566c4141/golden-neon-dining-stockcake.jpg">
-       <h2 class="hello">Welcome <br> to <br>favorite <br>place  </h2>
+      <h1>Delicious Food</h1>
+    </div>
+
+    <div class="slide">
+      <img src="https://cdn.bushwickdaily.com/wp-content/uploads/2025/04/rara_rhino_kev_turtle_02-scaled.jpeg">
       <h1>Fresh Ingredients</h1>
     </div>
-    <div class="slide active">
-      <img src="https://cdn.bushwickdaily.com/wp-content/uploads/2025/04/rara_rhino_kev_turtle_02-scaled.jpeg">
-      <div class="flexmood">
-        <div class="mood1">
-      <h2 class="hello">Welcome <br> to <br>favorite <br>place </h2>
-      </div>
-      <div class="mode2">
-      <h1>Best Taste</h1>
-      </div>
-      </div>
-    </div>
-    <div class="slide active">
+
+    <div class="slide">
       <img src="https://cassette.sphdigital.com.sg/image/herworld/b648cc5df63d64a490c3744df9d6c07dbcb4b6b8e04666d90009ad5498e8c91e?w=1000&q=85">
-       <h2 class="hello">Welcome <br> to <br>favorite <br>place  </h2>
+      <h1>Best Taste</h1>
+    </div>
+
+    <div class="slide">
+      <img src="https://www.10wallpaper.com/wallpaper/1440x900/1807/Urban_skyscraper_western_restaurant_night_view_1440x900.jpg">
+      <h1>Luxury Dining</h1>
+    </div>
+
+    <div class="slide">
+      <img src="https://jamitbistrony.com/wp-content/uploads/2025/08/places-that-are-open-941861-1024x576.jpg">
+      <h1>Family Place</h1>
+    </div>
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee">
+      <h1>Outdoor Seating</h1>
+    </div>
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
       <h1>Quality Service</h1>
     </div>
-    <div class="slide active">
-      <img src="https://www.10wallpaper.com/wallpaper/1440x900/1807/Urban_skyscraper_western_restaurant_night_view_1440x900.jpg">
-      <h2 class="hello">Welcome <br> to <br>favorite <br>place  </h2>
-      <h1>Welcome to Foodies</h1>
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1">
+      <h1>Welcome Foodies</h1>
     </div>
-   <div class="lines">
-  <span onclick="goSlide(0)"></span>
-  <span onclick="goSlide(1)"></span>
-  <span onclick="goSlide(2)"></span>
-  <span onclick="goSlide(3)"></span>
-  <span onclick="goSlide(4)"></span>
-</div>
+
+    <!-- Arrows -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Lines -->
+    <div class="lines">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
   </div>
-     </div>
+</div>
 
 <div class="about-section">
   <div class="about-container">
@@ -464,6 +478,28 @@
 <script src="two.js"></script>
 <script src="section.js"></script>
 <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <script>document.addEventListener("DOMContentLoaded",()=>{
+  const slides=document.querySelectorAll(".slide");
+  const lines=document.querySelectorAll(".lines span");
+  const next=document.querySelector(".next");
+  const prev=document.querySelector(".prev");
+  let index=0;
+
+  function show(i){
+    slides.forEach(s=>s.classList.remove("active"));
+    lines.forEach(l=>l.classList.remove("active"));
+    slides[i].classList.add("active");
+    lines[i].classList.add("active");
+    index=i;
+  }
+
+  next.onclick=()=>show((index+1)%slides.length);
+  prev.onclick=()=>show((index-1+slides.length)%slides.length);
+
+  lines.forEach((line,i)=> line.onclick=()=>show(i));
+
+  setInterval(()=>show((index+1)%slides.length),2000);
+  show(0);
+});</script>
 </body>
 </html>
