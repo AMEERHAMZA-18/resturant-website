@@ -248,6 +248,38 @@ nav a { margin: 0px; cursor: pointer; }
   background:#556b2f;
   transform:scale(1.05);
 }
+@media (max-width:768px){
+  .slide h1{
+    font-size:28px;
+    padding:10px 15px;
+    width:90%;
+    text-align:center;
+  }
+
+  .prev,.next{
+    font-size:26px;
+    padding:6px 10px;
+  }
+
+  .lines span{
+    width:18px;
+    height:3px;
+    margin:0 2px;
+  }
+
+  .slide img{
+    object-fit:cover;
+  }
+}
+
+@media (max-width:480px){
+  .slide h1{
+    font-size:22px;
+  }
+
+  .prev{ left:8px; }
+  .next{ right:8px; }
+}
 
 /* end section 3 */
 /* star four section */
