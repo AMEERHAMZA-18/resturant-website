@@ -3,7 +3,7 @@
 section { padding: 0px; }
 nav{position: fixed;  top:0px; right:0;}
 nav a { margin: 0px; cursor: pointer; }
-.picg{height:  40px; border-radius: 20px;}
+.picg{height:  40px; border-radius: 20px; object-fit: cover;}
 .mainlogo{display: flex;  gap: 10px;}
 .colors{ background-color:olivedrab !important;}
 .colorsub{background-color: rgba(2, 79, 8, 0.932); color: white; font-size: 20px;}
@@ -248,6 +248,7 @@ nav a { margin: 0px; cursor: pointer; }
   background:#556b2f;
   transform:scale(1.05);
 }
+/* sctio1media */
 @media (max-width:768px){
   .slide h1{
     font-size:28px;
@@ -269,6 +270,8 @@ nav a { margin: 0px; cursor: pointer; }
 
   .slide img{
     object-fit:cover;
+    object-position: cover;
+    width:500px ;
   }
 }
 
