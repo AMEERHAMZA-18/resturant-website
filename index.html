@@ -16,20 +16,70 @@
 
 
 <section id="login" class="page">
-  <h2>Login</h2>
-  <input placeholder="Email"><br>
-  <input type="password" placeholder="Password"><br>
-  <button>Login</button>
-  <button  onclick="showPage('home')">back</button>
+<div class="bodyl">
+  <div class="login-container">
+  <form class="login-form">
+    <h2>Midnight Munch Login</h2>
+
+    <div class="input-box">
+      <input type="email" required>
+      <label>Email Address</label>
+    </div>
+
+    <div class="input-box">
+      <input type="password" required>
+      <label>Password</label>
+    </div>
+
+    <button type="submit" class="login-btn">Login</button><br><br>
+    <button class="login-btn" onclick="showPage('home')">back</button>
+  </form>
+</div>
+  </div>
 </section>
 
 <section id="register" class="page">
-  <h2>Register</h2>
-  <input placeholder="Name"><br>
-  <input placeholder="Email"><br>
-  <input type="password" placeholder="Password"><br>
-  <button>Register</button>
-   <button  onclick="showPage('home')">back</button>
+  <div class="bodyf"></div>
+ <div class="vip-container">
+  <form class="vip-form">
+    <h2>Midnight Munch Registration</h2>
+
+    <div class="input-box">
+      <input type="text" required>
+      <label>Full Name</label>
+    </div>
+
+    <div class="input-box">
+      <input type="email" required>
+      <label>Email Address</label>
+    </div>
+
+    <div class="input-box">
+      <input type="tel" required>
+      <label>Phone Number</label>
+    </div>
+
+    <div class="input-box">
+      <input type="text" required>
+      <label>Restaurant Name</label>
+    </div>
+
+    <div class="input-box">
+      <input type="password" required>
+      <label>Create Password</label>
+    </div>
+
+    <div class="input-box">
+      <textarea rows="3" required></textarea>
+      <label>Restaurant Address</label>
+    </div>
+
+    <button type="submit" class="vip-btn">Register</button><br><br>
+    <button  class="vip-btn" onclick="showPage('home')">back</button>
+  </form>
+</div>
+</div>
+
 </section>
 
 
@@ -45,11 +95,11 @@
   <div class="toggle" onclick="toggleMenu()">☰</div>
 
   <nav class="nav-links" id="navLinks">
-    <a href="#">Home</a>
+    <a href="#hame">Home</a>
     <a href="#"  onclick="showPage('register')" >Registration</a>
     <a href="#"  onclick="showPage('login')">Login</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#about">About</a>
+    <a href="#con">Contact</a>
   </nav>
 </header>
  
@@ -110,42 +160,49 @@
   </div>
 </div>
 
-<div class="about-section">
-  <div class="about-container">
+<div class="about-light">
+  <div class="about-light-wrap">
 
-    <!-- Left Side -->
-    <div class="about-content">
-      <h2>About Midnight Munch</h2>
-      <p class="pg">
-        Midnight Munch is a modern restaurant created to satisfy your late‑night cravings.
-        We serve fresh ingredients, delicious flavors, and fast service.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <h3>🌙 Late Night</h3>
-          <p>Open till midnight.</p>
-        </div>
-
-        <div class="card">
-          <h3>🍔 Fresh Food</h3>
-          <p>Always fresh & tasty.</p>
-        </div>
-
-        <div class="card">
-          <h3>⚡ Fast Service</h3>
-          <p>Quick delivery.</p>
-        </div>
-      </div>
+    <!-- Image Side -->
+    <div class="about-light-img">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200" alt="Midnight Munch">
     </div>
 
-    <!-- Right Side Image -->
-    <div class="about-image">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2RXtY4Iz3OTesczVsgE89BW4u3Ecy5cptA&s" alt="Midnight Munch">
+    <!-- Content Side -->
+    <div   class="about-light-content">
+      <h2 id="home">About Midnight Munch</h2>
+      <p>
+        Midnight Munch is your perfect late‑night food destination where taste,
+        comfort, and speed come together. We serve freshly prepared meals with
+        rich flavors and a modern cozy dining experience designed for night lovers.
+      </p>
+
+      <div class="about-features">
+        <div class="feature-box">
+          <span>🌙</span>
+          <h4>Late Night Dining</h4>
+        </div>
+        <div class="feature-box">
+          <span>🍔</span>
+          <h4>Fresh & Quality Food</h4>
+        </div>
+        <div class="feature-box">
+          <span>⚡</span>
+          <h4>Quick Service</h4>
+        </div>
+        <div class="feature-box">
+          <span>🎶</span>
+          <h4>Songs</h4>
+        </div>
+      </div>
+
+      
     </div>
 
   </div>
 </div>
+
+
 
 <div class="menu-section">
   <h2>Popular Dishes</h2>
@@ -206,7 +263,25 @@
 </button>
   </div>
 </div>
-<div class="info-section">
+
+ <div class="poin">
+  <div class="bodyp">
+<div class="menu-container">
+  <h2 class="title">Midnight Munch Menu</h2>
+
+  <div class="tabs">
+    <button onclick="showCategory('drinks')">Drinks</button>
+    <button onclick="showCategory('desserts')">Desserts</button>
+    <button onclick="showCategory('dishes')">Dishes</button>
+  </div>
+
+  <div id="menuCards" class="cards"></div>
+</div>
+</div>
+</div>
+
+
+<div  id="hame" class="info-section">
 
   <!-- 1️⃣ Inside Sitting Area -->
   <div class="info-row">
@@ -351,7 +426,7 @@
 </div>
 
 
-<div class="testimonial-section">
+<div id="about" class="testimonial-section">
   <h2>Customer Experiences</h2>
 
   <div class="sliderh">
@@ -432,16 +507,16 @@
     <div class="pro-footer-col">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#hame">Home</a></li>
         <li><a href="#">Gallery</a></li>
         <li><a href="#">Booking</a></li>
         <li><a href="#">Menu</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#con">Contact</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
-    <div class="pro-footer-col">
+    <div id="con" class="pro-footer-col">
       <h3>Contact Info</h3>
       <p><i class="fas fa-map-marker-alt"></i> Main City Road, Pakistan</p>
       <p><i class="fas fa-phone"></i> +92 300 1234567</p>
@@ -469,6 +544,8 @@
   </div>
 </footer>
 </section>
+<script src="3-1.js"></script>
+<script src="loog.js"></script>
 <script src="7.js"></script>
 <script src="6.js"></script>
   <script src="5.js"></script>
